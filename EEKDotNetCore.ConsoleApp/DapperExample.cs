@@ -71,7 +71,7 @@ namespace EEKDotNetCore.ConsoleApp
             }
         }
 
-        public void Update(int id, string title, string author, string content) 
+        public void Update(int id, string title, string author, string content)
         {
             string query = $@"UPDATE [dbo].[Tbl_Blog]
             SET [BlogTitle] = @BlogTitle
@@ -102,11 +102,36 @@ namespace EEKDotNetCore.ConsoleApp
 
             using (IDbConnection db = new SqlConnection(_connectionString))
             {
-                int result = db.Execute(query, new BlogDataModel
+                int result = db.Execute(query, new BlogDapperDataModel
                 {
                     BlogId = id,
                 });
                 Console.WriteLine(result == 1 ? "Delete Successful" : "Delete Failed");
+
+            }
+        }
+
+        public void Edit(int id)
+        {
+            using (IDbConnection db = new SqlConnection(_connectionString))
+            {
+                string query = "select * from tbl_blog where DeleteFlag = 0 and BlogId = @BlogId;";
+                var item = db.Query<BlogDataModel>(query, new BlogDataModel() 
+                {
+                    BlogId = id
+                }).FirstOrDefault();
+
+                if(item is null)
+                {
+                    Console.WriteLine("No data found.");
+                    return;
+                }
+
+                Console.WriteLine(item.BlogId);
+                Console.WriteLine(item.BlogTitle);
+                Console.WriteLine(item.BlogAuthor);
+                Console.WriteLine(item.BlogContent);
+
 
             }
         }
