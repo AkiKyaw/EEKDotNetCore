@@ -3,12 +3,17 @@ using EEKDotNetCore.ConsoleApp;
 using System.Data;
 using System.Data.SqlClient;
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Create();
 //adoDotNetExample.Edit();
 //adoDotNetExample.Update();
-adoDotNetExample.Delete();
+
+DapperExample dapperExample = new DapperExample();
+////dapperExample.Read();
+//dapperExample.Create("Dapper","EK","jakdfaiufhoaifla");
+//dapperExample.Update(6,"Update","EK","testing");
+dapperExample.Delete(13);
 
 
 Console.ReadKey();
