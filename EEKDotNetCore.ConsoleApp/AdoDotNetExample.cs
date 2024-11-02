@@ -24,7 +24,7 @@ namespace EEKDotNetCore.ConsoleApp
             string query = @"SELECT [BlogId]
                            ,[BlogTitle]
                           ,[BlogAuthor]
-                          ,[BlohContent]
+                          ,[BlogContent]
                           ,[DeleteFlag]
                       FROM [dbo].[Tbl_Blog] where DeleteFlag = 0";
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -37,7 +37,7 @@ namespace EEKDotNetCore.ConsoleApp
                 Console.WriteLine(reader["BlogId"]);
                 Console.WriteLine(reader["BlogTitle"]);
                 Console.WriteLine(reader["BlogAuthor"]);
-                Console.WriteLine(reader["BlohContent"]);
+                Console.WriteLine(reader["BlogContent"]);
             }
 
             Console.WriteLine("Connection Closing...");
@@ -49,7 +49,7 @@ namespace EEKDotNetCore.ConsoleApp
             //    Console.WriteLine(dr["BlogId"]);
             //    Console.WriteLine(dr["BlogTitle"]);
             //    Console.WriteLine(dr["BlogAuthor"]);
-            //    Console.WriteLine(dr["BlohContent"]);
+            //    Console.WriteLine(dr["BlogContent"]);
             //    Console.WriteLine(dr["DeleteFlag"]);
             //}
         }
@@ -71,18 +71,18 @@ namespace EEKDotNetCore.ConsoleApp
             string query = $@"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
-           ,[BlohContent]
+           ,[BlogContent]
            ,[DeleteFlag])
             VALUES
            (@BlogTitle
            ,@BlogAuthor
-           ,@BlohContent
+           ,@BlogContent
            ,0)";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
-            cmd.Parameters.AddWithValue("@BlohContent", content);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
             //SqlDataAdapter adapter = new SqlDataAdapter(cmd2);
             //DataTable dt = new DataTable();
             //adapter.Fill(dt);
@@ -113,11 +113,11 @@ namespace EEKDotNetCore.ConsoleApp
             connection.Open();
 
             string query = @"SELECT [BlogId]
-      ,[BlogTitle]
-      ,[BlogAuthor]
-      ,[BlohContent]
-      ,[DeleteFlag]
-  FROM [dbo].[Tbl_Blog] where BlogId = @BlogId";
+                          ,[BlogTitle]
+                          ,[BlogAuthor]
+                          ,[BlogContent]
+                          ,[DeleteFlag]
+                      FROM [dbo].[Tbl_Blog] where BlogId = @BlogId";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
@@ -137,7 +137,7 @@ namespace EEKDotNetCore.ConsoleApp
             Console.WriteLine(dr["BlogId"]);
             Console.WriteLine(dr["BlogTitle"]);
             Console.WriteLine(dr["BlogAuthor"]);
-            Console.WriteLine(dr["BlohContent"]);
+            Console.WriteLine(dr["BlogContent"]);
         }
 
         public void Update()
@@ -148,10 +148,10 @@ namespace EEKDotNetCore.ConsoleApp
             Console.WriteLine("Blog Title :");
             string title = Console.ReadLine();
 
-            Console.WriteLine("Blog Author");
+            Console.WriteLine("Blog Author :");
             string author = Console.ReadLine();
 
-            Console.WriteLine("Blog content");
+            Console.WriteLine("Blog content :");
             string content = Console.ReadLine();
 
             SqlConnection connection = new SqlConnection(_connectionString);
@@ -160,7 +160,7 @@ namespace EEKDotNetCore.ConsoleApp
             string query = $@"UPDATE [dbo].[Tbl_Blog]
             SET [BlogTitle] = @BlogTitle
             ,[BlogAuthor] = @BlogAuthor
-            ,[BlohContent] = @BlohContent
+            ,[BlogContent] = @BlogContent
             ,[DeleteFlag] = 0
             WHERE BlogId = @BlogId";
 
@@ -168,7 +168,7 @@ namespace EEKDotNetCore.ConsoleApp
             cmd.Parameters.AddWithValue("@BlogId", id);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
-            cmd.Parameters.AddWithValue("@BlohContent", content);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
 
             int result = cmd.ExecuteNonQuery();
 
