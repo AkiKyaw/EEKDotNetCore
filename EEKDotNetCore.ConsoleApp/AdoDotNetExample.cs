@@ -186,8 +186,10 @@ namespace EEKDotNetCore.ConsoleApp
             SqlConnection connection = new SqlConnection(_connectionString);
             connection.Open();
 
-            string query = @"DELETE FROM [dbo].[Tbl_Blog]
-            WHERE BlogId = @BlogId";
+            string query = @"UPDATE [dbo].[Tbl_Blog]
+               SET [DeleteFlag] = 1
+             WHERE BlogId = @BlogId";
+
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
@@ -195,8 +197,11 @@ namespace EEKDotNetCore.ConsoleApp
             DataTable dt = new DataTable();
             adapter.Fill(dt);
 
+            int result = cmd.ExecuteNonQuery();
+
             connection.Close();
 
+            Console.WriteLine(result == 1 ? "Delete Successful" : "Delete Failed");
 
         }
     }
