@@ -9,11 +9,17 @@ using System.Data.SqlClient;
 //adoDotNetExample.Edit();
 //adoDotNetExample.Update();
 
-DapperExample dapperExample = new DapperExample();
-////dapperExample.Read();
+//DapperExample dapperExample = new DapperExample();
+//dapperExample.Read();
 //dapperExample.Create("Dapper","EK","jakdfaiufhoaifla");
 //dapperExample.Update(6,"Update","EK","testing");
-dapperExample.Delete(13);
+//dapperExample.Delete(13);
+//dapperExample.Edit(1);
+//dapperExample.Edit(6);
+
+EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Read();
+eFCoreExample.Create("EFCore","EEK","jfajfkdalhfdja");
 
 
 Console.ReadKey();
