@@ -19,7 +19,10 @@ using System.Data.SqlClient;
 
 EFCoreExample eFCoreExample = new EFCoreExample();
 //eFCoreExample.Read();
-eFCoreExample.Create("EFCore","EEK","jfajfkdalhfdja");
+//eFCoreExample.Create("EFCore","EEK","jfajfkdalhfdja");
+//eFCoreExample.Edit(8);
+//eFCoreExample.Update(7,"EFCore Update","EEK","jhfahwuieakf");
+//eFCoreExample.Delete(13);
 
 
 Console.ReadKey();
