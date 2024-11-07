@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{C9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.Database", "EEKDotNetCore.Database\EEKDotNetCore.Database.csproj", "{B623577A-204C-4D41-9618-B187F6E5660C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEKDotNetCore.ConsoleApp2", "EEKDotNetCore.ConsoleApp2\EEKDotNetCore.ConsoleApp2.csproj", "{32BD3CE4-97E6-433E-91E4-B3AB032736F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.ConsoleApp2", "EEKDotNetCore.ConsoleApp2\EEKDotNetCore.ConsoleApp2.csproj", "{32BD3CE4-97E6-433E-91E4-B3AB032736F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEKDotNetCore.RestApi", "EEKDotNetCore.RestApi\EEKDotNetCore.RestApi.csproj", "{CBDB32C8-6ED9-4B1C-B6FB-99051185EE12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{32BD3CE4-97E6-433E-91E4-B3AB032736F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32BD3CE4-97E6-433E-91E4-B3AB032736F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32BD3CE4-97E6-433E-91E4-B3AB032736F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDB32C8-6ED9-4B1C-B6FB-99051185EE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDB32C8-6ED9-4B1C-B6FB-99051185EE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDB32C8-6ED9-4B1C-B6FB-99051185EE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDB32C8-6ED9-4B1C-B6FB-99051185EE12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
