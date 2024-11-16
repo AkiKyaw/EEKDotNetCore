@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EEKDotNetCore.Database\EEKDotNetCore.Database.csproj" />
+    <ProjectReference Include="..\EEKDotNetCore.Domain\EEKDotNetCore.Domain.csproj" />
   </ItemGroup>
 
 </Project>
