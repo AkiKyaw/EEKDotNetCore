@@ -12,8 +12,8 @@ namespace EEKDotNetCore.RestApi.Controllers
         private readonly AppDbContext _db = new AppDbContext();
 
         [HttpGet]
-        public IActionResult GetBlogs() 
-        { 
+        public IActionResult GetBlogs()
+        {
             var lst = _db.TblBlogs
                 .AsNoTracking()
                 .Where(x => x.DeleteFlag == false)
@@ -26,7 +26,7 @@ namespace EEKDotNetCore.RestApi.Controllers
         {
             var item = _db.TblBlogs
                 .AsNoTracking()
-                .FirstOrDefault(x=> x.BlogId == id);
+                .FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound();
@@ -50,7 +50,7 @@ namespace EEKDotNetCore.RestApi.Controllers
             {
                 return NotFound();
             }
-            
+
             item.BlogTitle = blog.BlogTitle;
             item.BlogAuthor = blog.BlogAuthor;
             item.BlogContent = blog.BlogContent;

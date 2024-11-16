@@ -8,7 +8,6 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Data;
-
 namespace EEKDotNetCore.RestApi.Controllers
 {
     [Route("api/[controller]")]
@@ -33,7 +32,7 @@ namespace EEKDotNetCore.RestApi.Controllers
                           ,[DeleteFlag]
                       FROM [dbo].[Tbl_Blog] where DeleteFlag = 0";
             SqlCommand cmd = new SqlCommand(query, connection);
-            
+
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {

@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.BirdMinimalAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.PickAPileApi", "EEKDotNetCore.PickAPileApi\EEKDotNetCore.PickAPileApi.csproj", "{1D54E492-D9CC-48D1-A13D-94EAACB748D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEKDotNetCore.Shared", "EEKDotNetCore.Shared\EEKDotNetCore.Shared.csproj", "{21D39DBD-E402-473A-B14B-CAE3AA83FC76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.Shared", "EEKDotNetCore.Shared\EEKDotNetCore.Shared.csproj", "{21D39DBD-E402-473A-B14B-CAE3AA83FC76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEKDotNetCore.Domain", "EEKDotNetCore.Domain\EEKDotNetCore.Domain.csproj", "{1F6853E2-21AB-4DFC-8BEA-EFE285F7C676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{21D39DBD-E402-473A-B14B-CAE3AA83FC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D39DBD-E402-473A-B14B-CAE3AA83FC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D39DBD-E402-473A-B14B-CAE3AA83FC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6853E2-21AB-4DFC-8BEA-EFE285F7C676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6853E2-21AB-4DFC-8BEA-EFE285F7C676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6853E2-21AB-4DFC-8BEA-EFE285F7C676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6853E2-21AB-4DFC-8BEA-EFE285F7C676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
